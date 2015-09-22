@@ -1,0 +1,77 @@
+body {
+  position: relative;
+  font-family: $font;
+  background-color: $background-color;
+}
+
+#main-container {
+  position: relative;
+  min-height: 800px;
+
+  .container-fluid {
+    margin: 0 0;
+    padding: 0 0;
+  }
+}
+
+.updates {
+  background-color: lighten($default-color, 65%);
+  padding: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+    p {
+      font-family: $font;
+      font-size: $small-font;
+    }
+
+    h3 {
+      margin-top: 5px;
+    }
+
+}
+
+.block{
+  display: block;
+}
+
+.blue {
+  color: $default-color;
+}
+
+/*back to top visible button */
+.back-to-top {
+  position: fixed;
+  bottom: 10%;
+  right: 20px;
+  visibility: hidden;
+  color: $link-color;
+  border-radius: 50%;
+  border: 1px solid $link-color;
+  padding: 15px 17px;
+  transition: background-color 150ms ease-in-out;
+
+   i {
+    color: $link-color;
+    text-decoration: none;
+  }
+
+}
+
+.back-to-top:hover {
+  color: $link-color;
+  background-color: darken($default-color, 20%);
+  text-decoration: none;
+}
+
+.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .7;
+}
+

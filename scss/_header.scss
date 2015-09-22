@@ -1,0 +1,36 @@
+header .nav-styles {
+  border-bottom: 1px solid $default-color;
+}
+
+#menu-bar {
+  ul{
+    margin-bottom: 0;
+  }
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 0;
+
+    a {
+      padding: 10px 20px;
+      color: $link-color;
+      transition: background-color 350ms ease-in-out;
+    }
+    a:hover, a:focus {
+      text-decoration: none;
+      background-color: $default-color;
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+.kittens {
+  background: url('/img/big_ol_kitty.png') no-repeat center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 350px;
+}

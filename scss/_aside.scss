@@ -1,0 +1,50 @@
+/* Aside styles in scss fashion */
+aside {
+  width: 100%;
+  padding: 10px 10px;
+}
+
+
+#about-me {
+  margin-top: 20px;
+
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: .70;
+    transition: all 300ms ease;
+  }
+
+  img:hover {
+    opacity: 1;
+    border: 5px solid $default-color;
+  }
+}
+
+#skills {
+  text-align: center;
+  min-height: 200px;
+  background-color: $background-color;
+
+  ul {
+    padding-left: 0;
+    margin: 0 0 0 0;
+    list-style-type: none;
+    color: $default-color;
+
+    li {
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+    }
+
+    p {
+      font-family: $font;
+      font-size: $small-font;
+    }
+  }
+
+  h3 {
+    color: lighten($default-color, 100%);
+  }
+}

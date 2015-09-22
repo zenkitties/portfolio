@@ -1,0 +1,51 @@
+#footer {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  background-color: $default-color;
+  min-height: 150px;
+  width: 100%;
+
+  #social-media {
+    text-align: center;
+
+    ul {
+      padding-left: 0px;
+
+      li{
+        padding: 10% 1% 0 1%;
+        display: inline-block;
+        list-style-type: none;
+
+        .ic {
+          vertical-align: middle;
+        }
+      }
+    }
+
+    a {
+      color: darken($link-color, 20%);
+      text-decoration: none;
+      transition: color 300ms ease-in-out;
+    }
+    a:hover {
+      color: $link-color;
+    }
+
+    .social {
+        border: 2px solid $link-color;
+        min-width: 65px;
+        padding: 10px;
+        border-radius: 50%;
+        transition: background-color 300ms ease-in-out;
+    }
+    .social:hover {
+        background-color: darken($link-color, 80%);
+    }
+  }
+}
+
+
+/*======================================================
+FOOTER MEDIA QUERIES
+======================================================*/
+
