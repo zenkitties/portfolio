@@ -139,7 +139,7 @@ header .nav-styles {
 }
 
 .kittens {
-  background: url("portfolio/img/big_ol_kitty.png") no-repeat center center;
+  background: url("/portfolio/img/big_ol_kitty.png") no-repeat center center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
