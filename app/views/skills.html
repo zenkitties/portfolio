@@ -1,0 +1,9 @@
+<aside id="about-me">
+    <img class="block" ng-click="showme = !showme" ng-src="{{about.img}}" />
+    <div id="skills">
+        <h3>Toggle Skills</h3>
+        <ul>
+            <li ng-show="showme" ng-repeat="skill in about.skills">{{ skill }}</li>
+        </ul>
+    </div>
+</aside>

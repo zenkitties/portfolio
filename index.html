@@ -20,97 +20,22 @@
 </head>
 <body>
     <div id="main-container" class="container-fluid">
-        <header>
-            <div class="container-fluid">
-               <div class="row nav-styles">
-                   <nav>
-                       <div id="brand" class="col-xs-12 col-md-3 col-md-offset-1"></div><!--branding of zen kitties-->
-                       <div id="menu-bar" class="col-xs-12 col-md-8">
-                            <ul class="pull-right">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Me</a></li>
-                                <li><a href="#">Websites</a></li>
-                                <li><a href="#">Resume</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                       </div><!-- menu or navigational bar -->
-                   </nav><!-- navbar ending -->
-               </div><!-- navbar row -->
-            </div><!-- navbar container end -->
-            <div class="container-fluid">
-                <div class="row kittens"></div><!-- kittens image block -->
-            </div><!-- kittens container-->
-        </header><!-- end of header block -->
-
+        <zen-kitty-header></zen-kitty-header>
         <div class="container-fluid clearfix">
             <div class="row col-md-6 col-md-offset-3">
-                <article class="updates">
-                    <h3>Toggle all the skills!</h3>
-                    <h5>Sept. 22, 2015</h5>
-                    <p>As you can I have made two updates today. Well the reason for that is because my last update was done probably around 1am in the morning. This update
-                    was completed around 4:10pm. After fixing my aside or right side navigation I wanted to add some <span class="blue">Angular JS</span> functionality to it.
-                    So for that to happen I pulled the data from my controller which has all my skills in it to toggle them through <span class="blue">ng-show and ng-repeat</span></p>
-
-                    <p>It's pretty cool stuffs. So now you should be able to hover over my image and click the picture and take a peek at some of the skills that I've amassed over the couple
-                    of years of being a web developer. I will say again that this process is so smooth when it comes to Angular and using <span class="blue">SCSS</span> with mixins. Anyway, you can checkout
-                    my code and github page here. It will be like this until I finish my portfolio and sync my project with my real domain.</p>
-                </article>
-                <article class="updates">
-                    <h3>Side Skills Navigator</h3>
-                    <h5>Sept. 22, 2015</h5>
-                    <p>Today I worked on getting the right side skills navigator to work through <span class="blue">Angular JS</span>. Finally with much success.
-                        I included a list of skills which can be accessed by clicking the picture of myself on the right hand site of this portfolio. They are of the
-                        ones I consider my best assets that I've picked up over the course of a year and a half of learning developer languages.</p>
-
-                    <p>I also put the skills in an <span class="blue">Angular JS</span> controller which can be accessed at my leisure and then
-                        transmitted through a thing known as <span class="blue">ng-source</span>. That's one of those fancy things! Once the aside bar
-                        on the right is completely finished, I hope to move it into a directive that I'll be able to send in as to not clutter the main page
-                        full of unnecessary code.</p>
-                </article>
-                <article class="updates">
-                    <h3>First Sample Update</h3>
-                    <h5>Sept. 3, 2015</h5>
-                    <p>Today I did a little bit of implementation of <span class="blue">SASS</span> with the footer social media to give it the illusion
-                        of those icons (which were imported through font-awesome) to be round. I created a smoothing transition affect
-                        so that the hover is subtle yet smooth. CSS has really come a long way with <span class="blue">CSS3</span>!</p>
-
-                    <p>I also worked on other parts of the layout like the styling of these updates which will eventually be put either
-                        into a service or factory, or inside a controller full of <span class="blue">AngularJS</span> magic.</p>
-                </article>
+                <zen-kitty-updates></zen-kitty-updates>
             </div>
             <div class="col-md-offset-1 col-md-2" ng-controller="AboutController">
-                <aside id="about-me">
-                    <img class="block" ng-click="showme = !showme" ng-src="{{about.img}}" />
-                    <div id="skills">
-                        <h3>Toggle Skills</h3>
-                        <ul>
-                            <li ng-show="showme" ng-repeat="skill in about.skills">{{ skill }}</li>
-                        </ul>
-                    </div>
-                </aside>
+                <zen-skills></zen-skills>
             </div><!-- aside container -->
         </div><!-- updates container -->
     </div><!-- website container -->
-    <footer class="row clearfix" id="footer">
-        <div class="col-xs-12 col-md-3"></div>
-        <div id="social-media" class="col-xs-12 col-md-6">
-            <ul>
-                <li><a href="https://twitter.com/zenbrewmaster" target="_blank"><div class="social"><i class="ic icon-twitter icon-3x"></i></div></a></li>
-                <li><a href="https://www.facebook.com/barefootphilosopher" target="_blank"><div class="social"><i class="ic icon-facebook icon-3x"></i></div></a></li>
-                <li><a href="https://plus.google.com/u/0/109614161319186969298/posts/p/pub" target="_blank"><div class="social"><i class="ic icon-google-plus icon-3x"></i></div></a></li>
-                <li><a href="https://github.com/zenkitties" target="_blank"><div class="social"><i class="ic icon-github icon-3x"></i></div></a></li>
-                <li><a href="mailto:nick@zenkitties.pw"><div class="social"><i class="ic icon-envelope icon-3x"></i></div></a></li>
-            </ul>
-        </div>
-        <div class="col-xs-12 col-md-3">
-        </div>
-
-        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script><!-- calling in jQuery-->
-        <script type="text/javascript" src="js/bootstrap.min.js"></script><!-- pulling in bootstrap -->
-        <script type="text/javascript" src="js/angular.min.js"></script><!-- call in Angular for the project -->
-        <script type="text/javascript" src="js/script.js"></script><!--custom javascripts -->
-        <script type="text/javascript" src="app/app.js"></script>
-    </footer>
+    <zen-kitty-footer></zen-kitty-footer>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script><!-- calling in jQuery-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script><!-- pulling in bootstrap -->
+    <script type="text/javascript" src="js/angular.min.js"></script><!-- call in Angular for the project -->
+    <script type="text/javascript" src="js/script.js"></script><!--custom javascripts -->
+    <script type="text/javascript" src="app/app.js"></script>
 <!-- back to top -->
     <a class="back-to-top" href="#top">
         <i class="ic icon-chevron-up"></i>

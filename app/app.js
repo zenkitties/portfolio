@@ -11,7 +11,7 @@
               'of Downtown Fresno. I was also able to take part in the Geekwise Cohort number one. A program in which 8 of geekwise' +
               'academies best and have the most potential get to take part in real client work.',
               position: 'Freelance Web Developer',
-              img: '/portfolio/img/about-me.png',
+              img: 'portfolio/../../img/about-me.png',
               skills: [
                   'Javascript',
                   'jQuery',
@@ -35,7 +35,34 @@
                   'Affiliate Marketting'
               ]
       }
+    });
 
+    app.directive('zenSkills', function(){
+        return {
+            restrict: 'E',
+            templateUrl: 'app/views/skills.html'
+        }
+    });
+
+    app.directive('zenKittyHeader', function(){
+        return{
+            restrict: 'E',
+            templateUrl: 'app/views/header.html'
+        }
+    });
+
+    app.directive('zenKittyFooter', function(){
+       return {
+           restrict: 'E',
+           templateUrl: 'app/views/footer.html'
+       }
+    });
+
+    app.directive('zenKittyUpdates', function(){
+        return {
+            restrict: 'EA',
+            templateUrl: 'app/views/updates.html'
+        }
     });
 
 })(window.angular);
